@@ -15,7 +15,8 @@
     <!-- font family -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -67,20 +68,156 @@
         </section>
 
         <!-- banner section  -->
-        <section class="container mx-auto rounded-2xl">
-            <div class="hero min-h-screen rounded-2xl"
-                style="background-image:  url(images/banner.png); ">
-                <div class="hero-overlay bg-opacity-60 rounded-2xl"></div>
+        <section class="container mx-auto rounded-2xl ">
+            <div class="hero  rounded-2xl h-[600px]" style="background-image:  url(images/banner.png); ">
+                <div class="hero-overlay h-[600px] bg-opacity-60 rounded-2xl"></div>
                 <div class="flex flex-col items-center gap-5 text-center">
                     <h1 class="mb-5 text-2xl lg:text-5xl lg:w-[640px] font-bold text-white"> End-to-End Travel with</h1>
                     <h1 class="mb-5 lg:w-[640px] text-3xl lg:text-5xl font-bold text-green-400">M Paribahan</h1>
-                    <p class="mb-5 from-neutral-400 lg:w-[640px] text-white">Experience comfort and reliability with our bus transport service. Safe travels, punctuality, and exceptional service guaranteed. <br> Book now!</p>
+                    <p class="mb-5 from-neutral-400 lg:w-[640px] text-white">Experience comfort and reliability with our
+                        bus transport service. Safe travels, punctuality, and exceptional service guaranteed. <br> Book
+                        now!</p>
                     <button class="btn btn-success">Buy Tickets</button>
                 </div>
             </div>
         </section>
     </header>
     <main>
+        <!-- section 01: discount cupons -->
+        <section class="container mx-auto mb-5 mt-10">
+            <div class="flex flex-col items-center">
+                <div class="text-center">
+                    <h1 class="mb-5 lg:w-[640px] text-3xl lg:text-5xl font-bold text-black">Best Offers For You</h1>
+                </div>
+                <div class="flex flex-col lg:flex-row gap-4">
+                    <!-- card 1 -->
+                    <div class="card bg-yellow-500 text-black  lg:w-[550px] h-[220px] ">
+                        <div class="flex items-center text-center">
+                            <div class="card-body">
+                                <h2 class="text-xl lg:text-3xl font-extrabold">15% OFF</h2>
+                                <p class="lg:text-xl font-semibold">On your next purchase</p>
+                                <p>Use by February 2024</p>
+                            </div>
+                            <div>
+                                <img src="images/cupon-devider.png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h1 class="text-2xl font-extrabold">NEW15</h1>
+                                <p class="text-xl">Coupon Code</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card -2 -->
+                    <div class="card bg-[#F78C9C] text-black  lg:w-[550px] lg:h-[220px] ">
+                        <div class="flex items-center text-center">
+                            <div class="card-body">
+                                <h2 class="text-xl lg:text-3xl font-extrabold">20% OFF</h2>
+                                <p class="lg:text-xl font-semibold">On your next purchase</p>
+                                <p>Use by February 2024</p>
+                            </div>
+                            <div>
+                                <img src="images/cupon-devider.png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h1 class="text-2xl font-extrabold">Couple<span class="text-2xl lg:text-4xl">20</span>
+                                </h1>
+                                <p class="text-xl">Coupon Code</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- button  -->
+                <div class="card-actions justify-center mt-10">
+                    <button class="btn btn-outline btn-success">
+                        See All Offers
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sections 02: M.H Paribahan -->
+
+        <section class="container mx-auto mb-5 mt-10 bg-slate-50">
+            <div class="flex flex-col items-center">
+                <!-- Title of ticket -->
+                <div class="text-center mt-10">
+                    <h1 class="mb-5 lg:w-[640px] text-3xl lg:text-5xl font-bold text-green-400">M.H Paribahan</h1>
+                    <p class="mb-5 from-neutral-400 lg:w-[640px] text-black">Embark on unforgettable journeys with our
+                        luxurious buses. Enjoy comfort, safety, and top-notch service. Your adventure awaits! Book
+                        now!</p>
+                </div>
+
+                <!-- Info of ticket -->
+                <div>
+                    <!-- seat count -->
+                    <div class="card bg-white text-black  lg:w-[1000px] lg:h-[418px] ">
+                        <div class="flex items-center text-center">
+                            <!-- available seat or used seat -->
+                            <div class="lg:w-[800px] flex justify-between mt-[-200px]">
+                                <div class="flex  justify-center align-center gap-2">
+                                    <div>
+                                        <div><img src="images/bus-logo.png" alt=""></div>
+                                    </div>
+                                    <div>
+                                        <h1>MehediHasan Paribahan</h1>
+                                        <p>Coach-009-WEB | AC-Economy</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button class="btn btn-success bg-green-300">
+                                        <div class="flex justify-center items-center gap-2">
+                                            <div>
+                                                <img src="images/seat-green-filled.png" alt="">
+                                            </div>
+                                            <p class="text-green-600 text-xl"><span class="">40</span> Seats Left</p>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+
+
+                            <!--info divider  -->
+                            <div>
+                                <img src="images/info-devider.png" alt="">
+                            </div>
+                            <div class="card-body flex flex-col items-center">
+                                <div>
+                                    <img src="images/fare.png" alt="">
+                                </div>
+                                <h1 class="text-2xl font-extrabold"><span class="text-2xl lg:text-4xl">550</span> Taka
+                                </h1>
+                                <p class="text-2xl font-semibold">Per Seat</p>
+                            </div>
+                        </div>
+                    </div>
+<!-- Rout  -->
+
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+
 
     </main>
     <footer>
