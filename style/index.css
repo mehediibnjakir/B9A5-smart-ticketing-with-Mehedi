@@ -6,3 +6,19 @@
     font-weight: <weight>;
     font-style: normal;
 }
+
+
+
+.selected-ticket-container{
+    width: 450px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.selected-ticket-container div {
+    width: 450px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
