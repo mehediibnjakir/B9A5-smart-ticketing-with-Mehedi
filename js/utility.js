@@ -41,25 +41,7 @@ function grandTotalCost(id, value) {
 
 
 
-function applyCoupon(id, value) {
-    const couponInput = document.getElementById(id).value;
-    const grandTotal = 2200;
 
-    const ticketCount = value;
-
-    if (couponInput === 'NEW15' && ticketCount >= 4) {
-        // Apply 15% discount for NEW15 coupon code
-        const discount = grandTotal * 0.15;
-        return grandTotal - discount;
-    } else if (couponInput === 'COUPLE20' && ticketCount >= 4) {
-        // Apply 20% discount for COUPLE20 coupon code
-        const discount = grandTotal * 0.20;
-        return grandTotal - discount;
-    } else {
-        // No coupon applied
-        return grandTotal;
-    }
-}
 
 //function for selected seat 
 

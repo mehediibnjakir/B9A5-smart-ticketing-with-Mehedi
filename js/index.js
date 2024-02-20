@@ -58,13 +58,17 @@ for (let seat of allSeat) {
 
         // call coupon;
 
-        applyButton(count)
+
+
 
     })
 
-
-
 }
+
+
+
+
+
 
 let index = [];
 
@@ -92,11 +96,29 @@ function addSeatBg(e) {
     element.disabled = true;
 
 }
+//discount coupon apply
 
-//function for apply button
-function applyButton(count){
-    if (count === 4){
-        const btnApply =document.addEventListener('btn-apply');
-        btnApply.disabled = false;
+
+function applyCoupon(id, value) {
+    const couponInput = document.getElementById(id).value;
+    const grandTotal = 2200;
+    const ticketCount = value;
+
+    if (couponInput === 'NEW15' && ticketCount >= 4) {
+        // Apply 15% discount for NEW15 coupon code
+        const discount = grandTotal * 0.15;
+        const newGt = grandTotal - discount;
+        setInnerText('grand-total', newGt);
+    } else if (couponInput === 'COUPLE20' && ticketCount >= 4) {
+        // Apply 20% discount for COUPLE20 coupon code
+        const discount = grandTotal * 0.20;
+        const newGt = grandTotal - discount;
+        setInnerText('grand-total', newGt);
+    } else {
+        // No coupon applied
+        return grandTotal;
     }
 }
+
+
+function nextClick()
