@@ -82,7 +82,7 @@
             </div>
         </section>
     </header>
-    <main>
+    <main id="mainSec" class="">
         <!-- section 01: discount cupons -->
         <section class="container mx-auto mb-5 mt-10">
             <div class="flex flex-col items-center">
@@ -386,11 +386,11 @@
                                 <div class="flex justify-between lg:w-[450px]">
                                     <div class="h-15 lg:w-[450px] flex justify-between gap-2 items-center p-4">
                                         <div>
-                                            <input type="text" class="rounded-2xl lg:w-[420px] p-4 ">
+                                            <input id="input-coupon" type="text" class="rounded-xl lg:w-[420px] p-4 " placeholder="Have a Coupon?">
                                         </div>
                                         <div>
-                                            <button
-                                                class="btn btn-success text-xl font-semibold text-white -ml-28  rounded-2xl">Apply</button>
+                                            <button onclick="applyCoupon('input-coupon',count)" id="btn-apply"
+                                                class="btn btn-success text-xl font-semibold text-white -ml-28  rounded-xl">Apply</button>
                                         </div>
                                     </div>
                                 </div>
@@ -427,7 +427,7 @@
                                         placeholder="Enter your Email ID">
                                 </form>
                                 <form action="" class="p-2">
-                                    <button class="btn btn-success text-2xl text-white w-full">
+                                    <button onclick="next()" class="btn btn-success text-2xl text-white w-full">
                                         Next
                                     </button>
                                 </form>
@@ -454,12 +454,12 @@
         </section>
     </main>
     <!--ticket conformation success page  -->
-    <section id="ticket-conform" class="flex justify-center items-center bg-slate-300 hidden">
+    <section  id="subMainSec" class="flex justify-center items-center bg-slate-300  hidden">
         <div class="text-white bg-white text-center space-y-6 p-4 rounded-lg ">
             <div class="flex items-center justify-center">
                 <img src="images/success.png" alt="">
             </div>
-
+            <div class="flex flex-col items-center gap-3">
             <h1 class="text-3xl text-green-500 font-extrabold">SUCCESS</h1>
             <h1 class="text-2xl font-bold text-black">
                 Thank you for Booking Our Bus Seats.
@@ -467,9 +467,8 @@
             <h1 class="text-2xl font-bold text-black">
                 We are working hard to find the best service and deals for you.
             </h1>
-            <p class="text-3xl text-black">Shortly you will find a confirmation in your email.</p>
+            <p class="text-2xl text-black">Shortly you will find a confirmation in your email.</p>
             <button onclick="" class="btn btn-wide bg-green-500 text-white text-xl">Continue</button>
-
         </div>
     </section>
     <footer class="footer p-10 bg-black text-base-content text-white">

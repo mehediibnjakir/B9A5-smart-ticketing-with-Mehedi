@@ -38,6 +38,29 @@ function grandTotalCost(id, value) {
     setInnerText(id, sum2);
 }
 
+
+
+
+function applyCoupon(id, value) {
+    const couponInput = document.getElementById(id).value;
+    const grandTotal = 2200;
+
+    const ticketCount = value;
+
+    if (couponInput === 'NEW15' && ticketCount >= 4) {
+        // Apply 15% discount for NEW15 coupon code
+        const discount = grandTotal * 0.15;
+        return grandTotal - discount;
+    } else if (couponInput === 'COUPLE20' && ticketCount >= 4) {
+        // Apply 20% discount for COUPLE20 coupon code
+        const discount = grandTotal * 0.20;
+        return grandTotal - discount;
+    } else {
+        // No coupon applied
+        return grandTotal;
+    }
+}
+
 //function for selected seat 
 
 function selectedSeat(e) {
@@ -68,7 +91,7 @@ function updateTotalCost(id,value) {
     const totalCost = document.getElementById(id).innerText;
     const convertedTotal = parseInt(totalCost);
     const sum = convertedTotal + value;
-    setInnerText(id, sum)
+    setInnerText(id, sum);
 }
 
 
@@ -76,3 +99,19 @@ function updateTotalCost(id,value) {
 function setInnerText(id, value) {
     document.getElementById(id).innerText = value;
 }
+
+
+
+//hide some section;
+// function next(){
+//     const mainSec = document.getElementById('mainSec');
+// mainSec.classList.add('hidden');
+
+//     const mainSec = document.getElementById('subMainSec');
+// mainSec.classList.remove('hidden');
+
+// }
+
+// function hideElementById(elementId){
+//     const elemt = 
+// }
