@@ -122,5 +122,11 @@ document.addEventListener('keyup', function (e) {
 
 
 
-
+function buyTicketContinue() {
+    const section = document.getElementById('head-sec');
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+    const myMod =document.getElementById('my_modal_1');
+}
 
