@@ -76,9 +76,9 @@ function setInnerText(id, value) {
 }
 
 // function for disable next button
-function checkTicketAndPhone(value, id) {
-    if (value > 0 ) {
-        const buttonDisable = document.getElementById(id);
+function checkTicketAndPhone(value, mNumber) {
+    if (value > 0 && mNumber.value !== "") {
+        const buttonDisable = document.getElementById('btnNext');
         buttonDisable.removeAttribute("disabled");
     } 
 }

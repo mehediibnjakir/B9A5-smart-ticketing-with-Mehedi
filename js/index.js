@@ -6,7 +6,7 @@ function buyTicket() {
     }
 }
 
-
+const mNumber = document.getElementById('mobileNumber');
 // seat booked by addEventlistener
 const allSeat = document.querySelectorAll('.addSeat');
 let count = 0;
@@ -48,7 +48,7 @@ for (let seat of allSeat) {
         grandTotalCost('grand-total', ticketPrice);
 
         //next button call
-        checkTicketAndPhone(count, 'btnNext');
+        checkTicketAndPhone(count, mNumber);
 
 
 
@@ -111,11 +111,10 @@ function applyCoupon(id, value) {
 
 
 //2nd event listener for check phone number
-const mNumber = document.getElementById('mobileNumber').value;
-document.addEventListener('keyup', function (e) {
 
+document.addEventListener('keyup', function (e) {
     //next button call
-    checkTicketAndPhone(mNumber, 'btnNext');
+    checkTicketAndPhone(count, mNumber);
 
 
 })
@@ -127,6 +126,5 @@ function buyTicketContinue() {
     if (section) {
         section.scrollIntoView({ behavior: 'smooth' });
     }
-    const myMod =document.getElementById('my_modal_1');
 }
 
