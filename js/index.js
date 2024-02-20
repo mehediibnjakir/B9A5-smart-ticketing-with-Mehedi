@@ -8,10 +8,10 @@ function buyTicket() {
 
 
 // seat by 
-const allSeat = document.getElementsByClassName('addSeat');
+const allSeat = document.querySelectorAll('.addSeat');
 let count = 0;
-for (const seat of allSeat) {
-    
+for (let seat of allSeat) {
+
     seat.addEventListener('click', function (e) {
         count = count + 1;
 
@@ -30,13 +30,26 @@ for (const seat of allSeat) {
 
         if (count >= 5) {
             alert('Select 4 or less than 4 seats!');
+
             return;
         }
 
+
+
+        toggleSeatSelection();
         //call function selected seats
         selectedSeat(e)
 
-        
+        addSeatBg(e)
+
+        if (e.target.tagName === 'BUTTON') {
+            // Toggle the selected state of the button
+            e.target.classList.toggle('selected');
+        }
+
+        /*  if (e.target.tagName === 'BUTTON') { 
+            e.target.disabled = true; 
+         } */
 
         // call function update total cost
         updateTotalCost('total-cost', ticketPrice);
@@ -45,7 +58,7 @@ for (const seat of allSeat) {
 
         // call coupon;
 
-
+        applyButton(count)
 
     })
 
@@ -53,4 +66,37 @@ for (const seat of allSeat) {
 
 }
 
+let index = [];
 
+function toggleSeatSelection() {
+    const element = document.querySelectorAll('.addSeat')[index];
+    if (element) {
+        if (element.classList.contains('selected')) {
+            // If already selected, deselect it
+            element.classList.remove('selected');
+        } else {
+            // If not selected, select it
+            element.classList.add('selected');
+        }
+    } else {
+        console.error('Element not found at index ' + index);
+    }
+
+}
+
+//add background color and disable button 
+function addSeatBg(e) {
+    const element = e.target;
+    element.classList.add('disabled:bg-green-600');
+    element.classList.add('disabled:text-white');
+    element.disabled = true;
+
+}
+
+//function for apply button
+function applyButton(count){
+    if (count === 4){
+        const btnApply =document.addEventListener('btn-apply');
+        btnApply.disabled = false;
+    }
+}
