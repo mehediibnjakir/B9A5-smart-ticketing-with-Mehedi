@@ -7,13 +7,17 @@ function buyTicket() {
 }
 
 
-// seat by 
+// seat booked by addEventlistener
 const allSeat = document.querySelectorAll('.addSeat');
 let count = 0;
+
+let countLess = 40;
 for (let seat of allSeat) {
 
     seat.addEventListener('click', function (e) {
-        count = count + 1;
+        count++;
+
+        countLess--;
 
         //find the ticket price with id
         const tPrice = document.getElementById('ticket-Price').innerText;
@@ -23,40 +27,28 @@ for (let seat of allSeat) {
         const gTotal = document.getElementById('grand-total').innerText;
         const finalGrandTotal = parseInt(gTotal);
 
-
-
-        //call selected inner text
-        setInnerText('seat-count', count);
-
-        if (count >= 5) {
+        // condition of 4 tickets
+        if (count > 4) {
             alert('Select 4 or less than 4 seats!');
-
             return;
         }
 
+        //call selected inner text
+        setInnerText('seat-count', count);
+        setInnerText('seat-less', countLess);
 
-
-        toggleSeatSelection();
         //call function selected seats
+        toggleSeatSelection();
         selectedSeat(e)
-
         addSeatBg(e)
-
-        if (e.target.tagName === 'BUTTON') {
-            // Toggle the selected state of the button
-            e.target.classList.toggle('selected');
-        }
-
-        /*  if (e.target.tagName === 'BUTTON') { 
-            e.target.disabled = true; 
-         } */
 
         // call function update total cost
         updateTotalCost('total-cost', ticketPrice);
         //call grand total update cost
         grandTotalCost('grand-total', ticketPrice);
 
-        // call coupon;
+        //next button call
+        checkTicketAndPhone(count, 'btnNext');
 
 
 
@@ -66,10 +58,7 @@ for (let seat of allSeat) {
 }
 
 
-
-
-
-
+// toggle section function
 let index = [];
 
 function toggleSeatSelection() {
@@ -121,4 +110,23 @@ function applyCoupon(id, value) {
 }
 
 
-function nextClick()
+//
+const mNumber = document.getElementById('mobileNumber').value;
+document.addEventListener('keyup', function (e) {
+
+    //next button call
+    checkTicketAndPhone(mNumber, 'btnNext');
+
+
+})
+//
+
+function nextClick() {
+    const section1 = document.getElementById('section1');
+    const section2 = document.getElementById('section2');
+
+    section2.removeAttribute("hidden");
+    section1.addAttribute("hidden");
+}
+
+

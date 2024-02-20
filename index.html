@@ -82,7 +82,7 @@
             </div>
         </section>
     </header>
-    <main id="mainSec" class="">
+    <main class="section" id="section1">
         <!-- section 01: discount cupons -->
         <section class="container mx-auto mb-5 mt-10">
             <div class="flex flex-col items-center">
@@ -119,7 +119,7 @@
                                 <img src="images/cupon-devider.png" alt="">
                             </div>
                             <div class="card-body">
-                                <h1 class="text-2xl font-extrabold">Couple<span class="text-2xl lg:text-4xl">20</span>
+                                <h1 class="text-2xl font-extrabold">COUPLE<span class="text-2xl lg:text-4xl">20</span>
                                 </h1>
                                 <p class="text-xl">Coupon Code</p>
                             </div>
@@ -416,7 +416,7 @@
                                     <input type="text" class="rounded-2xl p-4 text-xl font-semibold w-full border mt-3"
                                         placeholder="Enter your Name">
                                 </form>
-                                <form action="" class="p-2">
+                                <form id="mobileNumber" action="" class="p-2">
                                     <p class="text-2xl font-bold ">Mobile Number:*</p>
                                     <input type="number" class="rounded-2xl p-4 text-xl w-full border font-semibold mt-3"
                                         placeholder="Enter your Mobile Number">
@@ -427,7 +427,7 @@
                                         placeholder="Enter your Email ID">
                                 </form>
                                 <form action="" class="p-2">
-                                    <button onclick="next()" class="btn btn-success text-2xl text-white w-full">
+                                    <button id="btnNext" onclick="nextClick()" class="btn btn-success text-2xl text-white w-full" disabled>
                                         Next
                                     </button>
                                 </form>
@@ -454,7 +454,7 @@
         </section>
     </main>
     <!--ticket conformation success page  -->
-    <section  id="subMainSec" class="flex justify-center items-center bg-slate-300  hidden">
+    <section  id="section2" class="flex justify-center items-center bg-slate-300  hidden section">
         <div class="text-white bg-white text-center space-y-6 p-4 rounded-lg ">
             <div class="flex items-center justify-center">
                 <img src="images/success.png" alt="">

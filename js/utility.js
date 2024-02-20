@@ -23,9 +23,6 @@
 
 //check cupon code 
 
-function checkCupon(){
-
-}
 
 
 
@@ -37,10 +34,6 @@ function grandTotalCost(id, value) {
     const sum2 = convertedTotal + parseInt(value);
     setInnerText(id, sum2);
 }
-
-
-
-
 
 
 //function for selected seat 
@@ -69,7 +62,7 @@ function selectedSeat(e) {
 
 // function for total cost
 
-function updateTotalCost(id,value) {
+function updateTotalCost(id, value) {
     const totalCost = document.getElementById(id).innerText;
     const convertedTotal = parseInt(totalCost);
     const sum = convertedTotal + value;
@@ -80,6 +73,16 @@ function updateTotalCost(id,value) {
 // setInner text function
 function setInnerText(id, value) {
     document.getElementById(id).innerText = value;
+}
+
+// function for disable next button
+function checkTicketAndPhone(value, id) {
+    if (value > 0 && value = typeof[Number]) {
+        const buttonDisable = document.getElementById(id);
+        buttonDisable.removeAttribute("disabled");
+    } else {
+return;
+    }
 }
 
 
@@ -95,7 +98,7 @@ function setInnerText(id, value) {
 // }
 
 // function hideElementById(elementId){
-//     const elemt = 
+//     const elemt =
 // }
 
 
