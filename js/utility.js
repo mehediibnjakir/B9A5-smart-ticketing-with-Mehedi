@@ -16,29 +16,16 @@
 //     }
 // }
 
-// seat by 
-const allSeat = document.getElementsByClassName('addSeat');
-let count = 0;
-for (const seat of allSeat) {
-    seat.addEventListener('click', function (e) {
-        count = count + 1;
-
-        const ticketPrice = 550;
-
-        //call selected inner text
-        setInnerText('seat-count', count);
-        //call function selected seats
-        selectedSeat(e)
-
-        // call function update total cost
-        updateTotalCost('total-cost', ticketPrice);
-        //call grand total update cost
-        grandTotalCost('grand-total', ticketPrice);
 
 
-    })
+
+
+
+//check cupon code 
+
+function checkCupon(){
+
 }
-
 
 
 
@@ -83,8 +70,6 @@ function updateTotalCost(id,value) {
     const sum = convertedTotal + value;
     setInnerText(id, sum)
 }
-
-
 
 
 // setInner text function
