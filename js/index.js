@@ -72,7 +72,7 @@ function toggleSeatSelection() {
             element.classList.add('selected');
         }
     } else {
-        console.error('Element not found at index ' + index);
+        // console.error('Element not found at index ' + index);
     }
 
 }
@@ -110,7 +110,7 @@ function applyCoupon(id, value) {
 }
 
 
-//
+//2nd event listener for check phone number
 const mNumber = document.getElementById('mobileNumber').value;
 document.addEventListener('keyup', function (e) {
 
@@ -119,14 +119,8 @@ document.addEventListener('keyup', function (e) {
 
 
 })
-//
 
-function nextClick() {
-    const section1 = document.getElementById('section1');
-    const section2 = document.getElementById('section2');
 
-    section2.removeAttribute("hidden");
-    section1.addAttribute("hidden");
-}
+
 
 

@@ -77,12 +77,10 @@ function setInnerText(id, value) {
 
 // function for disable next button
 function checkTicketAndPhone(value, id) {
-    if (value > 0 && value = typeof[Number]) {
+    if (value > 0 ) {
         const buttonDisable = document.getElementById(id);
         buttonDisable.removeAttribute("disabled");
-    } else {
-return;
-    }
+    } 
 }
 
 
